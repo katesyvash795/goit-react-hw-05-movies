@@ -1,28 +1,30 @@
+// App.js
 import React, { lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   Navigate,
 } from 'react-router-dom';
+import { Nav,Link} from './App.styled'; // Импортируйте Nav из AppStyles.js
 
-const Home = lazy(() => import('./Home'));
-const Movies = lazy(() => import('./Movies'));
-const Cast = lazy(() => import('./Cast'));
-const Reviews = lazy(() => import('./Reviews'));
-const MovieDetails = lazy(() => import('./MovieDetails'));
+const Home = lazy(() => import('../page/Home/Home'));
+const Movies = lazy(() => import('../page/Movies/Movies'));
+const Cast = lazy(() => import('../Cast/Cast'));
+const Reviews = lazy(() => import('../Reviews/Reviews'));
+const MovieDetails = lazy(() => import('../page/MovieDetails/MovieDetails'));
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
-        </nav>
+        <Nav> {/* Используйте стилизованный компонент Nav для навигационного меню */}
+        <Link to="/"  end>Home</Link>
+          <Link to="/movies" >Movies</Link>
 
-        <Suspense fallback={<div>Loading...</div>}>
+        </Nav>
+
+        <Suspense>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
