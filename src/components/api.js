@@ -1,5 +1,3 @@
-// api.js
-
 const apiKey = 'ff9d4b6887bcbf55a4828f854b70eb96';
 //Movies.js
 const fetchMovies = async (query) => {
@@ -76,7 +74,7 @@ const fetchMovieCredits = async (movieId) => {
       return data.results;
     } catch (error) {
       console.error('Error:', error);
-      throw error; // Re-throw the error to handle it in the component
+      throw error; 
     }
   };
 

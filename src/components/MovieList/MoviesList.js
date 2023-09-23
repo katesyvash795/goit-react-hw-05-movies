@@ -1,11 +1,10 @@
-// MoviesList.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StyledMoviesList } from './MoviesList.styled'; // Импортируйте StyledMoviesList из файла MoviesListStyles
+import { StyledMoviesList } from './MoviesList.styled'; 
 
 const MoviesList = ({ movies, location }) => {
   return (
-    <StyledMoviesList> {/* Оберните компонент в StyledMoviesList */}
+    <StyledMoviesList> 
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>

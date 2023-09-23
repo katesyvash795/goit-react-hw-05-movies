@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CastContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width:1200px;
+  width: 1200px;
   gap: 20px;
   justify-content: center;
 `;

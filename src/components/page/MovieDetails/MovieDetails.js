@@ -1,20 +1,17 @@
-// MovieDetails.js
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { fetchMovieDetails } from '../../api'; // Импортируйте функцию fetchMovieDetails
-import { StyledMovieDetails,MoviesDetails,Details, Additional, Container } from './MovieDetails.styled'; // Импортируйте StyledMovieDetails из файла MovieDetailsStyles
+import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
+import { fetchMovieDetails } from '../../api'; 
+import { StyledMovieDetails,MoviesDetails,Details, Additional, Container } from './MovieDetails.styled'; 
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [movieImage, setMovieImage] = useState(null);
-  const navigate = useNavigate();
   const location = useLocation();
   const backLink = location.state?.from ?? '/';
 
   useEffect(() => {
     if (movieId) {
-      // Вызов функции для получения деталей фильма
       fetchMovieDetails(movieId)
         .then((data) => {
           setMovie(data.movie);
@@ -36,7 +33,7 @@ const MovieDetails = () => {
 
   return (
     <Container>
-      <StyledMovieDetails> {/* Оберните содержимое компонента в StyledMovieDetails */}
+      <StyledMovieDetails> 
       <Link to={backLink}>Back</Link>
             <MoviesDetails>
               <img

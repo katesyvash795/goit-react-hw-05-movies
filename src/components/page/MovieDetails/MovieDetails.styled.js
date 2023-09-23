@@ -1,13 +1,15 @@
-// MovieDetailsStyles.js
 import styled from 'styled-components';
+
 export const Container = styled.div`
 display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column`
+
 export const Details = styled.div`
 display:flex;
 flex-direction:column`
+
 export const MoviesDetails = styled.div`
 display:flex;
 img {
@@ -61,6 +63,7 @@ a:hover {
   padding:10px;
   color: white; /* Цвет ссылок при наведении */
 }`
+
 export const StyledMovieDetails = styled.div`
   display: flex;
   flex-direction:column;

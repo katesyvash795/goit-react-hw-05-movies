@@ -1,4 +1,3 @@
-// App.js
 import React, { lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router,
@@ -6,7 +5,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import { Nav,Link} from './App.styled'; // Импортируйте Nav из AppStyles.js
+import { Nav, Link } from './App.styled';
 
 const Home = lazy(() => import('../page/Home/Home'));
 const Movies = lazy(() => import('../page/Movies/Movies'));
@@ -18,12 +17,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav> {/* Используйте стилизованный компонент Nav для навигационного меню */}
-        <Link to="/"  end>Home</Link>
-          <Link to="/movies" >Movies</Link>
-
+        <Nav>
+          <Link to="/" end>
+            Home
+          </Link>
+          <Link to="/movies">Movies</Link>
         </Nav>
-
         <Suspense>
           <Routes>
             <Route path="/" element={<Home />} />

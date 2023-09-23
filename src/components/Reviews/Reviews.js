@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieReviews } from '../api'; // Импортируйте функцию из файла api.js
+import { fetchMovieReviews } from '../api'; 
 import { ReviewCard,AuthorName, ReviewContent, NoReviewsMessage } from "./Reviews.styled";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -8,8 +8,8 @@ const Reviews = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    setLoading(true); // Установите состояние загрузки в true перед началом запроса
-    fetchMovieReviews(movieId) // Используйте функцию для запроса отзывов
+    setLoading(true); 
+    fetchMovieReviews(movieId) 
       .then((data) => {
         setReviews(data);
         setLoading(false);

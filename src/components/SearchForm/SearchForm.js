@@ -1,7 +1,6 @@
-// SearchForm.js
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { StyledForm } from './SearchForm.styled'; // Импортируем стили
+import { StyledForm } from './SearchForm.styled'; 
 
 const SearchForm = () => {
   const [searchTerm, setSearchTerm] = useState('');
