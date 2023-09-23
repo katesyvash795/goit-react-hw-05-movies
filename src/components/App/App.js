@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -15,7 +14,7 @@ const MovieDetails = lazy(() => import('../page/MovieDetails/MovieDetails'));
 
 function App() {
   return (
-    <Router>
+
       <div className="App">
         <Nav>
           <Link to="/" end>
@@ -35,7 +34,6 @@ function App() {
           </Routes>
         </Suspense>
       </div>
-    </Router>
   );
 }
 
