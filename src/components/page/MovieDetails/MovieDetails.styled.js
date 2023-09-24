@@ -13,8 +13,6 @@ flex-direction:column`
 export const MoviesDetails = styled.div`
 display:flex;
 img {
-    width: 250px;
-    height: auto;
     margin-right: 20px;
     border-radius: 5px;
   }
@@ -52,16 +50,15 @@ width:1200px;
   padding: 20px;
 a {
   font-size: 18px;
-  margin: 10px;
-  text-decoration: none; /* Убрать подчеркивание у ссылок */
-  color: #0077cc; /* Цвет ссылок */
-  transition: color 0.3s; /* Плавное изменение цвета при наведении */
+  padding: 10px;
+  text-decoration: none; 
+  color: #0077cc; 
+  transition: color 0.5s; 
 }
 
 a:hover {
   background-color:red;
-  padding:10px;
-  color: white; /* Цвет ссылок при наведении */
+  color: white; 
 }`
 
 export const StyledMovieDetails = styled.div`
@@ -77,14 +74,14 @@ export const StyledMovieDetails = styled.div`
   
   a {
     font-size: 18px;
-    margin: 0 0 10px 0;
-    text-decoration: none; /* Убрать подчеркивание у ссылок */
-    color: #0077cc; /* Цвет ссылок */
-    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+   padding:10px;
+   margin:0 0 10px 0;
+    text-decoration: none; 
+    color: #0077cc; 
+    transition: color 0.3s; 
   }
   
   a:hover {
     background-color:red;
-    padding:10px;
-    color: white; /* Цвет ссылок при наведении */
+    color: white; 
   }`

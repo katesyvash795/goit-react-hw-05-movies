@@ -19,13 +19,13 @@ export const Nav = styled.nav`
   a {
     text-decoration: none;
     color: #fff;
+    padding: 10px;
     margin-right: 10px;
     font-weight: bold;
 
     &:hover {
       color: white;
       background-color: red;
-      padding: 10px;
     }
   }
 `;

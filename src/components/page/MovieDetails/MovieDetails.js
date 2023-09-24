@@ -8,7 +8,7 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [movieImage, setMovieImage] = useState(null);
   const location = useLocation();
-  const backLink = location.state?.from ?? '/';
+  // const backLink = location.state?.from ?? '/';
 
   useEffect(() => {
     if (movieId) {
@@ -34,11 +34,12 @@ const MovieDetails = () => {
   return (
     <Container>
       <StyledMovieDetails> 
-      <Link to={backLink}>Back</Link>
+      <Link to={location.state}>Back</Link>
             <MoviesDetails>
               <img
           src={movieImage ? movieImage : defaultImg}
-          alt={movie.title}/>
+          alt={movie.title}
+          width="330" height="250"/>
         <Details>
           <h1>{movie.title}</h1>
           <p><strong>Genres:</strong> {movie.genres.map(genre => genre.name).join(', ')}</p>
@@ -49,8 +50,8 @@ const MovieDetails = () => {
     </StyledMovieDetails>
 <Additional>
       <h3>Additional information</h3> 
-      <Link to={`/movies/${movieId}/cast`}>Cast</Link>
-        <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
+      <Link to={`/movies/${movieId}/cast`} state={location.state}>Cast</Link>
+        <Link to={`/movies/${movieId}/reviews`} state={location.state}>Reviews</Link>
         <Outlet /> 
 </Additional>
     </Container>
